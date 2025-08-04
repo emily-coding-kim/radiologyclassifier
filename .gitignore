@@ -1,0 +1,8 @@
+venv/
+__pycache__/
+.ipynb_checkpoints/
+.vscode/
+~$CLEANED- Emily - Input Data 1- canine_thorax_scoring.xlsx
+CLEANED- Emily - Input Data 1- canine_thorax_scoring.xlsx
+Research Student Assignments.env
+*.env
