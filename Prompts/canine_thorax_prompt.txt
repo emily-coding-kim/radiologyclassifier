@@ -1,0 +1,120 @@
+“You are an experienced veterinary clinician. I will provide you with a veterinary radiologist’s case findings from a specific canine patient’s thorax scans.”
+
+“I will provide a list of possible canine diseases for you to diagnose based on the findings. Mark each diagnosis Positive or Negative depending on your evaluation of the findings.\n”
+
+“YOUR TASK: Read and analyze the given findings and provide a detailed explanation for why each disease should be marked Positive or Negative. Adhere to the following guidelines for each disease when analyzing the findings:\n”
+
+“General Guidelines:\n”
+
+“If a particular disease and any indicative symptoms are not mentioned at all, mark that disease Negative.\n”
+“If a specific disease or symptom of a disease is identified as age-appropriate, mark that disease Negative.\n”
+“If a symptom is identified anywhere in the normal range, mark the corresponding disease Negative.\n”
+“Ignore parts of the findings that do not pertain to the thorax or areas in the thorax (e.g. Lungs, Heart, Lymph nodes, Trachea, Esophagus, and related structures)\n”
+
+“Disease Guidelines:\n”
+
+“perihilar_infiltrate: Mark perihilar_infiltrate Positive if the findings contain evidence of perihilar infiltrate, or the following indicators: infiltrate in the perihilar, infiltrate more pronounced, or any other evidence a veterinary clinician would find of the presence of perihilar infiltrate.”
+	“Mark perihilar_infiltrate Negative if the findings have no mention of these indicators, do not contain evidence of perihilar infiltrate, or say the lungs are normal throughout. \n”
+        
+“pneumonia: Mark pneumonia Positive if the findings contain evidence of pneumonia, or the following indicators: alveolar pattern, ventral distribution in a lung lobe, lesions at periphery and extend toward hilus with worsening severity, diffuse distribution in lungs, or any other evidence a veterinary clinician would find of the presence of pneumonia.”
+	“Mark esophagitis Negative if the findings have no mention of these indicators, do not contain evidence of pneumonia, or say the lungs are normal throughout. \n”
+        
+“bronchitis: Mark bronchitis Positive if the findings contain evidence of bronchitis, or the following indicators: bronchointerstitial pulmonary pattern, lobar bronchi narrowing, dynamic airway disease, bronchial wall thickening, peribronchial cuffing, bronchial markings, increased bronchovascular markings, airway thickening, prominent bronchi, anything to suggest a restricted bronchial tube, or any other evidence a veterinary clinician would find of the presence of bronchitis.”
+	“Mark bronchitis Negative if the findings have no mention of these indicators, do not contain evidence of bronchitis, or say the lungs or bronchi are normal throughout. \n”
+
+ “interstitial: Mark interstitial Positive if the findings contain evidence of interstitial lung disease, or the following indicators: something affecting the interstitium (structural tissue of lung), interstitial markings, reticular pattern, diffuse interstitial opacity, interstitial thickening, ground-glass opacities, linear opacities, or any other evidence a veterinary clinician would find of the presence of interstitial lung disease.”
+	“Mark interstitial Negative if the findings have no mention of these indicators, do not contain evidence of interstitial lung disease, or say the lungs are normal throughout. \n”
+
+ “hypo_plastic_trachea: Mark hypo_plastic_trachea Positive if the findings contain evidence of hypoplastic trachea or the following indicators: small or constricted trachea diameter or any other evidence a veterinary clinician would find of the presence of hypoplastic trachea.”
+	“Mark hypo_plastic_trachea Negative if the findings have no mention of these indicators, do not contain evidence of hypoplastic trachea, or say the trachea is normal throughout. \n”
+
+“right_sided_cardiomegaly: Mark right_sided_cardiomegaly Positive if the findings contain evidence of right sided cardiomegaly, or the following indicators: cardiomegaly on the right heart chamber, enlarged heart on right side, rounding of right heart border, reverse D shape on DV/VD view, or any other evidence a veterinary clinician would find of the presence of right sided cardiomegaly.”
+	“Mark right_sided_cardiomegaly Negative if the findings have no mention of these indicators, do not contain evidence of right sided cardiomegaly, or say the heart is normal throughout.”
+	“If you mark right_sided_cardiomegaly Positive, also mark cardiomegaly Positive. \n”
+
+“left_sided_cardiomegaly: Mark left_sided_cardiomegaly Positive if the findings contain evidence of left sided cardiomegaly, or the following indicators: enlarged heart, left side, tall cardiac silhouette on lateral view, or any other evidence a veterinary clinician would find of the presence of left sided cardiomegaly.”
+	“Mark left_sided cardiomegaly Negative if the findings have no mention of these indicators, do not contain evidence of left sided cardiomegaly, or say the heart is normal throughout.”
+	“If you mark left_sided_cardiomegaly Positive, also mark cardiomegaly Positive. /n”
+
+“cardiomegaly: Mark cardiomegaly Positive if the findings contain evidence of cardiomegaly, or the following indicators: enlarged heart, enlarged cardiac silhouette, or any other evidence a veterinary clinician would find of the presence of cardiomegaly. Also mark Positive if right_sided_cardiomegaly and/or left_sided_cardiomegaly are marked Positive.”
+	“Mark cardiomegaly Negative if the findings have no mention of these indicators, do not contain evidence of cardiomegaly, or say the heart is normal throughout. \n”
+
+"pulmonary_nodules: Mark pulmonary_nodules Positive if the findings contain evidence of pulmonary nodules, or the following indicators: nodules or masses in the lungs, (soft tissue) opacity or shadow involving lungs or lung lobe, nodular opacity or nodular shadow in lungs or bronchi, or any other evidence a veterinary clinician would find of the presence of pulmonary nodules. ”
+        "Mark pulmonary_nodules Negative if the findings have no mention of these indicators, do not contain evidence of pulmonary nodules, or say the lungs are normal throughout.\n”      
+       
+“pleural_effusion: Mark pleural_effusion Positive if the findings contain evidence of pleural effusion, or the following indicators: collection of fluid around lungs/in pleural cavity, pleural fluid accumulation, pleural fluid buildup, pleural fluid collection, pleural fluid presence, pleural fluid opacity, or any other evidence a veterinary clinician would find of the presence of pleural effusion.”
+	“Mark pleural_effusion Negative if the findings have no mention of these indicators, do not contain evidence of plural effusion, or say the lungs and or pleural space is normal throughout. \n”
+
+“rtm: Mark rtm Positive if the findings contain evidence of Redundant Tracheal Membrane, or the following indicators: RTM, tracheal membrane redundancy, tracheal membrane laxity, tracheal membrane abnormality, tracheal membrane deformity, tracheal membrane malformation, opacity in tracheal wall, or any other evidence a veterinary clinician would find of the presence of redundant tracheal membrane.”
+	“Mark rtm Negative if the findings have no mention of these indicators, do not contain evidence of redundant tracheal membrane, or say the tracheal is normal throughout. \n”
+
+“focal_caudodorsal_lung: Mark focal_caudodorsal_lung Positive if the findings contain evidence of focal abnormalities in the caudodorsal lung lobe, or the following indicators: localized abnormalities in caudodorsal lung fields, pulmonary bulla on caudal lung lobe, localized opacity or nodules in caudodorsal lung lobe, or any other evidence a veterinary clinician would find of the presence of focal abnormalities in the caudodorsal lung lobe.”
+	“Mark focal_caudodorsal_lung Negative if the findings have no mention of these indicators, do not contain evidence of focal abnormalities in caudodorsal lung region, or say the lungs are normal throughout. \n”
+       
+“focal_perihilar: Mark focal_perihilar Positive if the findings contain evidence of focal abnormalities in the perihilar of the lung, or the following indicators: localized abnormalities, opacities, or shadows in perihilar lung area (around hilum), or any other evidence a veterinary clinician would find of the presence of focal abnormalities in the perihilar region of the lung.”
+	“Mark focal_perihilar Negative if the findings have no mention of these indicators, do not contain evidence of focal abnormalities in the perihilar of the lung, or say the lungs are normal throughout. \n”        
+
+“pulmonary_hypoinflation: Mark pulmonary_hypoinflation Positive if the findings contain evidence of pulmonary hypoinflation, or the following indicators: hypoinflation, atelectasis, hypoinflated lungs, lung lobe collapse, inability to fully inflate lungs in any capacity or region, or any other evidence a veterinary clinician would find of the presence of pulmonary hypoinflation.”
+	“Mark pulmonary_hypoinflation Negative if the findings have no mention of these indicators, do not contain evidence of pulmonary hypoinflation, or say the lungs are normal throughout.\n”
+       
+“pericardial_effusion: Mark pericardial_effusion Positive if the findings contain evidence of pericardial effusion, or the following indicators: buildup of fluid in pericardial sac (space around heart), cardiac silhouette distortion, cardiac silhouette has reniform shape, the heart is enlarged in an unusual shape (e.g. the bottom is wider), or any other evidence a veterinary clinician would find of the presence of pericardial effusion.”
+	“Mark pericardial_effusion Negative if the findings have no mention of these indicators, do not contain evidence of pericardial effusion, or say the heart is normal throughout.\n”
+
+“bronchiectasis: Mark bronchiectasis Positive if the findings contain evidence of bronchiectasis, or the following indicators: dilated bronchi, widened airways, or any other evidence a veterinary clinician would find of the presence of bronchiectasis.”
+	“Mark bronchiectasis Negative if the findings have no mention of these indicators, do not contain evidence of left sided cardiomegaly, or say the lungs or bronchi are normal throughout.\n”
+
+“pulmonary_vessel_enlargement: Mark pulmonary_vessel_enlargement Positive if the findings contain evidence of pulmonary vessel enlargement , or the following indicators: enlarged pulmonary vasculature, enlarged vasculature or arteries in the lungs, enlarged aorta, or any other evidence a veterinary clinician would find of the presence of pulmonary vessel enlargement.”
+	“Mark pulmonary_vessel_enlargement Negative if the findings have no mention of these indicators, do not contain evidence of pulmonary vessel enlargement, or say the lungs or vasculature are normal throughout.\n”
+
+ “thoracic_lymphadenopathy: Mark thoracic_lymphadenopathy Positive if the findings contain evidence of thoracic lymphadenopathy, or the following indicators: lymph node swelling in thorax, intrathoracic lymphadenopathy, soft tissue opacity where lymph nodes are located: [in dorsal aspect of cranial mediastinum (near vessels, esophagus, and nerves), dorsal to the cranial aspect of third sternebra, in middle mediastinum, medial to right cranial lung lobe bronchus and lateral to trachea, medial to left cranial lung lobe bronchus and lateral to the trachea, between the two caudal lobar bronchi (caudal to bifurcation of carina)], or any other evidence a veterinary clinician would find of the presence of thoracic lymphadenopathy.”
+	“Mark thoracic_lymphadenopathy Negative if the findings have no mention of these indicators, do not contain evidence of thoracic lymphadenopathy, or say the lymph nodes are normal throughout.\n”
+
+“esophagitis: Mark esophagitis Positive if the findings contain evidence of esophagitis, or the following indicators: esophageal dilation, gas distention in esophagus, foreign body in esophagus, or any other evidence a veterinary clinician would find of the presence of esophagitis. “
+	“Mark esophagitis Negative if the findings have no mention of these indicators, do not contain evidence of esophagitis, or say the esophagus is normal throughout. \n”
+
+“diseased_lungs: Mark diseased_lungs Positive if the findings contain evidence of pulmonary disease or if at least ONE of the following lung-related diseases have been marked Positive: pulmonary_nodules, pneumonia, interstitial, pleural_effusion, perihilar_infiltrate, focal_caudodorsal_lung, focal_perihilar, pulmonary_vessel_enlargment, pulmonary_hypoinflation, Fe_Alveolar.”
+	“Mark diseased_lungs Negative if all of the specified lung-related diseases are Negative or the findings say the lungs are normal throughout. \n”
+
+ “vhs_v2: Mark vhs_v2 Positive if the findings list the Vertebral Heart Score (VHS) as greater than 10.5.\n"
+        "Mark vhs_v2 Negative if the findings list the VHS as less than or equal to 10.5, or do not mention the VHS at all.\n"
+
+“End of Disease Guidelines. Further instructions:\n”
+
+        "IMPORTANT Deliverable: Return the results in JSON format that matches the ground truth structure. "
+        "Your response should contain ONLY the values for each disease classification (Positive, Negative). "
+        "Do NOT include explanations in this JSON output.\n\n"
+
+"Reference the findings:\n" + findings + "\n\n"
+        "CRITICAL: Return ONLY raw JSON - no markdown, no code blocks, no explanations, no extra text.\n"
+        "Your response must start with { and end with } and be valid JSON.\n\n"
+        "Return ONLY a JSON object in this EXACT JSON format (no markdown formatting) with diseases in the exact following order:\n”
+        "{\n"
+        '  "perihilar_infiltrate": "Positive",\n'
+        '  "pneumonia": "Negative",\n'
+        '  "bronchitis": "Positive",\n'
+        '  "interstitial": "Positive",\n'
+        '  "diseased_lungs": "Positive",\n'
+        '  "hypo_plastic_trachea": "Negative",\n'
+        '  "cardiomegaly": "Negative",\n'
+        '  "pulmonary_nodules": "Negative",\n'
+        '  "pleural_effusion": "Negative",\n'
+        '  "rtm": "Negative",\n'
+        '  "focal_caudodorsal_lung": "Positive",\n'
+        '  "focal_perihilar": "Negative",\n'
+        '  "pulmonary_hypoinflation": "Negative",\n'
+        '  "right_sided_cardiomegaly": "Negative",\n'
+        '  "pericardial_effusion": "Negative",\n'
+        '  "bronchiectasis": "Negative",\n'
+        '  "pulmonary_vessel_enlargement": "Negative",\n'
+        '  "left_sided_cardiomegaly": "Negative",\n'
+        '  "thoracic_lymphadenopathy": "Negative",\n'
+        '  "esophagitis": "Negative",\n'
+        '  "vhs_v2": "Negative"\n'
+        "}\n\n"
+
+        "Each value must be exactly 'Positive' or ‘Negative'. "
+        "Include all 21 disease classifications in the exact order shown above."
+        "DO NOT include any other text, summaries, explanations, or formatting in your response.\n\n"
+ 
+“The radiologist findings are below. Disregard any notes that do not pertain to the thorax.\n”
+        
